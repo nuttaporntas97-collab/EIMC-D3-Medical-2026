@@ -1,0 +1,6 @@
+{
+  "name": "EIMC D3 Medical",
+  "description": "Hospital medical dispensing and ward management system with Google Sheets database integration",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
