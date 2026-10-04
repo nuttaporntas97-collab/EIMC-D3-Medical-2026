@@ -113,15 +113,9 @@ function handleRequest(e) {
 }
 
 function getOrCreateSpreadsheet() {
-  var files = DriveApp.getFilesByName(CONFIG.SPREADSHEET_NAME);
-  if (files.hasNext()) {
-    var file = files.next();
-    return SpreadsheetApp.openById(file.getId());
-  }
-  var newSS = SpreadsheetApp.create(CONFIG.SPREADSHEET_NAME);
-  initDatabaseStructure(newSS);
-  return newSS;
+  return SpreadsheetApp.getActiveSpreadsheet();
 }
+
 
 function initDatabaseStructure(ss) {
   var sheets = [
